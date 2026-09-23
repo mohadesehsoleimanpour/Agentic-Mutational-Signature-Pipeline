@@ -1,0 +1,35 @@
+project:
+  name: Agentic-Mutational-Signature-Pipeline
+
+data:
+  location: local        # local | server
+  path: data/examples
+  type: auto             # auto | fastq | count_matrix | csv | tsv | excel
+
+execution:
+  mode: auto             # auto | local | server
+  backend: auto          # auto | local | slurm
+
+llm:
+  provider: ollama       # ollama | openai
+  model: qwen3:4b
+
+server:
+  host: null
+  user: null
+  data_path: null
+  scheduler: slurm
+
+preprocessing:
+  allow_feature_filtering: true
+  allow_downsampling: true
+  require_human_approval: true
+
+analysis:
+  run_pca: true
+  run_nmf: true
+  k_min: 2
+  k_max: 5
+
+output:
+  results_dir: results
