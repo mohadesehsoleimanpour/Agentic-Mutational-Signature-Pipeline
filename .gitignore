@@ -13,3 +13,25 @@ data/raw/*
 
 results/*
 !results/.gitkeep
+
+# Example/local datasets
+data/examples/*
+!data/examples/.gitkeep
+
+# Processed datasets
+data/processed/*
+!data/processed/.gitkeep
+
+
+# Local scientific datasets
+data/**/*.csv
+data/**/*.tsv
+data/**/*.xlsx
+data/**/*.xls
+data/**/*.fastq
+data/**/*.fastq.gz
+data/**/*.fq
+data/**/*.fq.gz
+
+# Keep empty data folders in Git
+!data/**/.gitkeep
